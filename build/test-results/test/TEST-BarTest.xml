@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BarTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-08T22:47:19" hostname="LAPTOP-RT553HKO" time="0.732">
+  <properties/>
+  <testcase name="addObserver()" classname="BarTest" time="0.732"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
