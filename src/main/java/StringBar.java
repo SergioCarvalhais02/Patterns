@@ -1,18 +1,27 @@
 public class StringBar extends Bar {
-    private boolean happy;
-    public StringBar(){happy = false;}
+    private boolean ishappy;
+    public StringBar(){ishappy = false;}
     @Override
     public boolean isHappyHour() {
-        return happy;
+        return ishappy;
     }
     @Override
     public void startHappyHour() {
-        happy = true;
+        ishappy = true;
         notifyObservers();
     }
     @Override
     public void endHappyHour() {
-        happy = false;
+        ishappy = false;
         notifyObservers();
+    }
+    public void order(StringDrink drink,StringRecipe recipe)
+    {
+        recipe.mix(drink);
+    }
+    public void notifyObservers() {
+        for (BarObserver observer : observers)
+            if (isHappyHour()) observer.happyHourStarted(this);
+            else observer.happyHourEnded(this);
     }
 }
